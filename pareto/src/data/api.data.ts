@@ -34,10 +34,8 @@ export const $: gmoduleDefinition.T.ModuleDefinition<pd.SourceLocation> = {
             })),
         }),
         'interfaces': d({
-            "Push": method(typeReference("Type")),
         }),
         'functions': d({
-            "Build": func(typeReference("common", "Null"), interfaceReference("Push"), null, data(typeReference("Array"), false)),
             "GetElementAt": func(typeReference("GetElementAtData"), null, null, data(typeReference("Type"), false)),
             "GetLength": func(typeReference("Array"), null, null, data(typeReference("common", "Number"), false)),
         }),
@@ -46,7 +44,6 @@ export const $: gmoduleDefinition.T.ModuleDefinition<pd.SourceLocation> = {
         'imports': d({
         }),
         'algorithms': d({
-            "build": algorithm(definitionReference("Build")),
             "getElementAt": algorithm(definitionReference("GetElementAt")),
             "getLength": algorithm(definitionReference("GetLength")),
         })

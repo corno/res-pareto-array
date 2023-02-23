@@ -8,7 +8,7 @@ import { $ as api } from "./api.data"
 
 export const $: gproject.T.Project<pd.SourceLocation> = {
     'author': "Corno",
-    'description': "a pareto wrapper around basic string operations as Pareto lacks them (yes, really, by design, the idea is to find a way how not to need them, and if you really do, then use this library)",
+    'description': "a pareto wrapper around basic array operations as Pareto lacks them (yes, really, by design, the idea is to find a way how not to need them, and if you really do, then use this library)",
     'license': "ISC",
     
     'dependencies': d({
