@@ -1,11 +1,10 @@
 import * as pt from 'pareto-core-types'
 
-import * as gglo from "./glossary"
+import * as gthis from "./glossary"
 
+export type CgetElementAt = gthis.FGetElementAt
 
-export type CgetElementAt = gglo.FGetElementAt
-
-export type CgetLength = gglo.FGetLength
+export type CgetLength = gthis.FGetLength
 
 export type API = {
     getElementAt: CgetElementAt
