@@ -1,9 +1,16 @@
 import * as pt from 'pareto-core-types'
 
-import { T   } from './types.generated'
+import { T } from './types.generated'
 
-import * as gcommon from "glo-pareto-common"
+import * as g_common from "glo-pareto-common"
 
-export type FGetElementAt = <GPType>($: T.GetElementAtData<GPType>,) => T.Type<GPType>
+export namespace I {}
 
-export type FGetLength = <GPType>($: T.Array<GPType>,) => gcommon.T.Number
+export namespace B {}
+
+export namespace F {
+    
+    export type GetElementAt = <GType>($: T.GetElementAtData<GType>,) => T.Type<GType>
+    
+    export type GetLength = <GType>($: T.Array<GType>,) => g_common.T.Number
+}

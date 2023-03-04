@@ -1,7 +1,7 @@
 import * as gapi from "../definition/glossary"
 
-import { CgetLength } from "../definition/api.generated"
+import { getLength } from "../definition/api.generated"
 
-export const $$: CgetLength = <T>($: gapi.T.Array<T>) => {
+export const $$: getLength = <T>($: gapi.T.Array<T>) => {
     return $.__getLength()
 }

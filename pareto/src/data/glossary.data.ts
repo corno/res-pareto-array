@@ -32,6 +32,8 @@ export const $: gglossary.T.Glossary<pd.SourceLocation> ={
             "index": member(number()),
         })),
     }),
+    'builders': d({
+    }),
     'interfaces': d({
     }),
     'functions': d({

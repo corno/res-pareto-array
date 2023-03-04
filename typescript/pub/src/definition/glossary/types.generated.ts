@@ -1,27 +1,27 @@
 import * as pt from 'pareto-core-types'
 
-import * as gcommon from "glo-pareto-common"
+import * as g_common from "glo-pareto-common"
 
 export namespace T {
     
     export namespace Array {
         
-        export type A<GPType> = GPType
+        export type T<GType> = GType
     }
     
-    export type Array<GPType> = pt.Array<GPType>
+    export type Array<GType> = pt.Array<GType>
     
     export namespace GetElementAtData {
         
-        export type array<GPType> = T.Array<GPType>
+        export type array<GType> = T.Array<GType>
         
-        export type index<GPType> = number
+        export type index<GType> = number
     }
     
-    export type GetElementAtData<GPType> = {
-        readonly 'array': T.Array<GPType>
+    export type GetElementAtData<GType> = {
+        readonly 'array': T.Array<GType>
         readonly 'index': number
     }
     
-    export type Type<GPType> = GPType
+    export type Type<GType> = GType
 }
