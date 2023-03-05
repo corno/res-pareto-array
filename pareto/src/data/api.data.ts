@@ -9,5 +9,5 @@ export const $: gapi.T.API<pd.SourceLocation> = {
     'algorithms': d({
         "getElementAt": algorithm(functionReference("this", {}, "GetElementAt")),
         "getLength": algorithm(functionReference("this", {}, "GetLength")),
-    })
+    }),
 }
