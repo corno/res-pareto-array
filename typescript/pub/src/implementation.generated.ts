@@ -1,4 +1,4 @@
-import { API } from "./definition/api.generated"
+import { API } from "./api.generated"
 import { $$ as igetElementAt } from "./implementations/getElementAt.native"
 import { $$ as igetLength } from "./implementations/getLength.native"
 

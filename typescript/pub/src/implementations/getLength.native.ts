@@ -1,6 +1,6 @@
-import * as gapi from "../definition/glossary"
+import * as gapi from "../glossary"
 
-import { getLength } from "../definition/api.generated"
+import { getLength } from "../api.generated"
 
 export const $$: getLength = <T>($: gapi.T.Array<T>) => {
     return $.__getLength()
