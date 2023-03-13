@@ -7,37 +7,43 @@ import {
     dictionary, member, taggedUnion, types, group,
     array,
     typeReference,
-    data,
-    func,
+    sdata,
+    sfunc,
     type,
     optional,
-    reference,
     number,
     glossaryParameter,
+    ref,
+    externalTypeReference,
+    imp,
     
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
-import * as gglossary from "lib-pareto-typescript-project/dist/submodules/glossary"
+import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
 const d = pd.d
 
-export const $: gglossary.T.Glossary<pd.SourceLocation> ={
+export const $: g_glossary.T.Glossary<pd.SourceLocation> ={
     'parameters': d({
         "Type": null,
+    }),
+    'imports': d({
+        "common": imp({}),
     }),
     'types': d({
         "Array": type(array(glossaryParameter("Type"))),
         "Type": type(glossaryParameter("Type")),
         "GetElementAtData": type(group({
-            "array": member(reference("Array")),
+            "array": member(ref(typeReference("Array"))),
             "index": member(number()),
         })),
     }),
-    'builders': d({
-    }),
-    'interfaces': d({
-    }),
-    'functions': d({
-        "GetElementAt": func(typeReference("GetElementAtData"), null, null, data(typeReference("Type"), false)),
-        "GetLength": func(typeReference("Array"), null, null, data(typeReference("common", "Number"), false)),
-    }),
+    'type': ['synchronous', {
+        'builders': d({
+        }),
+        'functions': d({
+            "GetElementAt": sfunc(typeReference("GetElementAtData"), null, null, sdata(typeReference("Type"))),
+            "GetLength": sfunc(typeReference("Array"), null, null, sdata(externalTypeReference("common", "Number"))),
+        }),
+
+    }],
 }
