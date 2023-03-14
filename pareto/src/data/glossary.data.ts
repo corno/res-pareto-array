@@ -41,8 +41,8 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> ={
         'builders': d({
         }),
         'functions': d({
-            "GetElementAt": sfunc(typeReference("GetElementAtData"), null, null, sdata(typeReference("Type"))),
-            "GetLength": sfunc(typeReference("Array"), null, null, sdata(externalTypeReference("common", "Number"))),
+            "GetElementAt": sfunc(sdata(typeReference("GetElementAtData")), sdata(typeReference("Type"))),
+            "GetLength": sfunc(sdata(typeReference("Array")), sdata(externalTypeReference("common", "Number"))),
         }),
 
     }],
