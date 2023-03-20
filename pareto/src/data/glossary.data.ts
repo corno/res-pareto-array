@@ -1,22 +1,8 @@
 import * as pd from 'pareto-core-data'
 
 import {
-    string,
-    null_,
-    nested,
-    dictionary, member, taggedUnion, types, group,
-    array,
-    typeReference,
-    sdata,
-    sfunc,
-    type,
-    optional,
-    number,
-    glossaryParameter,
-    ref,
-    externalTypeReference,
-    imp,
-    
+    array, data, externalTypeReference, glossaryParameter, group, imp, member, number, ref, sfunction,
+    type, typeReference
 } from "lib-pareto-typescript-project/dist/submodules/glossary/shorthands"
 
 import * as g_glossary from "lib-pareto-typescript-project/dist/submodules/glossary"
@@ -37,13 +23,15 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> ={
             "index": member(number()),
         })),
     }),
-    'type': ['synchronous', {
-        'builders': d({
+    'asynchronous': {
+        'interfaces': d({}),
+        'algorithms': d({}),
+    },
+    'synchronous': {
+        'interfaces': d({}),
+        'algorithms': d({
+            "GetElementAt": sfunction(typeReference("Type"), data(typeReference("GetElementAtData"))),
+            "GetLength": sfunction(externalTypeReference("common", "Number"), data(typeReference("Array"))),
         }),
-        'functions': d({
-            "GetElementAt": sfunc(sdata(typeReference("GetElementAtData")), sdata(typeReference("Type"))),
-            "GetLength": sfunc(sdata(typeReference("Array")), sdata(externalTypeReference("common", "Number"))),
-        }),
-
-    }],
+    },
 }
