@@ -4,9 +4,9 @@ import * as g_this from "./glossary"
 
 export namespace A {
     
-    export type getElementAt = g_this.SYNC.A.F.GetElementAt
+    export type getElementAt = <GAnnotation>() => g_this.SYNC.A.F.GetElementAt<GAnnotation>
     
-    export type getLength = g_this.SYNC.A.F.GetLength
+    export type getLength = <GAnnotation>() => g_this.SYNC.A.F.GetLength<GAnnotation>
 }
 
 export type API = {
