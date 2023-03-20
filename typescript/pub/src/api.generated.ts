@@ -10,6 +10,6 @@ export namespace A {
 }
 
 export type API = {
-    getElementAt: A.getElementAt
-    getLength: A.getLength
+    readonly 'getElementAt': A.getElementAt
+    readonly 'getLength': A.getLength
 }
