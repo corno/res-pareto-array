@@ -17,12 +17,12 @@ export namespace SYNC {
         
         
         export namespace F {
-            export type GetElementAt<GType> = ($: T.GetElementAtData<GType>) => T.Type<GType>
+            export type GetElementAt = <TType>($: T.GetElementAtData<TType>) => TType
         }
         
         
         export namespace F {
-            export type GetLength<GType> = ($: T.Array<GType>) => g_common.T.Number
+            export type GetLength = <TType>($: T.Array<TType>) => g_common.T.Number
         }
     }
 }

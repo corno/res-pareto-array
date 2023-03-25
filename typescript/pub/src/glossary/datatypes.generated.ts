@@ -6,22 +6,20 @@ export namespace T {
     
     export namespace Array {
         
-        export type A<GType> = GType
+        export type A<TType> = TType
     }
     
-    export type Array<GType> = pt.Array<GType>
+    export type Array<TType> = pt.Array<TType>
     
     export namespace GetElementAtData {
         
-        export type array<GType> = T.Array<GType>
+        export type array<TType> = T.Array<TType>
         
-        export type index<GType> = number
+        export type index<TType> = number
     }
     
-    export type GetElementAtData<GType> = {
-        readonly 'array': T.Array<GType>
+    export type GetElementAtData<TType> = {
+        readonly 'array': T.Array<TType>
         readonly 'index': number
     }
-    
-    export type Type<GType> = GType
 }
