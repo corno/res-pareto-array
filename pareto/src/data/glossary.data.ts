@@ -13,13 +13,16 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
     'imports': d({
         "common": imp({}),
     }),
-    'types': d({
-        "Array": parametrizedType({ "Type": null }, array(ref(typeParameter("Type")))),
-        "GetElementAtData": parametrizedType({ "Type": null }, group({
-            "array": member(ref(typeReference("Array", { "Type": typeParameter("Type") }))),
-            "index": member(number()),
-        })),
-    }),
+    'root': {
+        'namespaces': d({}),
+        'types': d({
+            "Array": parametrizedType({ "Type": null }, array(ref(typeParameter("Type")))),
+            "GetElementAtData": parametrizedType({ "Type": null }, group({
+                "array": member(ref(typeReference("Array", { "Type": typeParameter("Type") }))),
+                "index": member(number()),
+            })),
+        }),
+    },
     'asynchronous': {
         'interfaces': d({}),
         'algorithms': d({}),
