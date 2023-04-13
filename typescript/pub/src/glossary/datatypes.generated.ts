@@ -13,6 +13,13 @@ export namespace T {
     
     export type Array<TType> = pt.Array<TType>
     
+    export namespace ArrayOfArrays {
+        
+        export type A<TType> = T.Array<TType>
+    }
+    
+    export type ArrayOfArrays<TType> = pt.Array<T.Array<TType>>
+    
     export namespace GetElementAtData {
         
         export type array<TType> = T.Array<TType>

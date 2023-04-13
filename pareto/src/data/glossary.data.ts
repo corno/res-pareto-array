@@ -17,6 +17,7 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
         'namespaces': d({}),
         'types': d({
             "Array": parametrizedType({ "Type": null }, array(ref(typeParameter("Type")))),
+            "ArrayOfArrays": parametrizedType({ "Type": null }, array(ref(typeReference("Array",  { "Type": typeParameter("Type") })))),
             "GetElementAtData": parametrizedType({ "Type": null }, group({
                 "array": member(ref(typeReference("Array", { "Type": typeParameter("Type") }))),
                 "index": member(number()),
@@ -32,6 +33,7 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
         'algorithms': d({
             "GetElementAt": sfunction(typeParameter("Type"), data(typeReference("GetElementAtData", { "Type": typeParameter("Type") })), { "Type": null }),
             "GetLength": sfunction(externalTypeReference("common", "Number"), data(typeReference("Array", { "Type": typeParameter("Type") })), { "Type": null }),
+            "Merge": sfunction(typeReference("Array",  { "Type": typeParameter("Type") }), data(typeReference("ArrayOfArrays",  { "Type": typeParameter("Type") })), { "Type": null })
         }),
     },
 }

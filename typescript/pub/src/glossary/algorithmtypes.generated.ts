@@ -24,5 +24,10 @@ export namespace SYNC {
         export namespace F {
             export type GetLength = <TType>($: T.Array<TType>) => g_common.T.Number
         }
+        
+        
+        export namespace F {
+            export type Merge = <TType>($: T.ArrayOfArrays<TType>) => T.Array<TType>
+        }
     }
 }
