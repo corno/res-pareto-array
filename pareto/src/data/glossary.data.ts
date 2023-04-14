@@ -22,6 +22,11 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
                 "array": member(ref(typeReference("Array", { "Type": typeParameter("Type") }))),
                 "index": member(number()),
             })),
+
+            "PushParameters": parametrizedType({ "Type": null }, group({
+                "array": member(ref(typeReference("Array", { "Type": typeParameter("Type") }))),
+                "element": member(ref(typeParameter("Type"))),
+            })),
         }),
     },
     'asynchronous': {
@@ -33,7 +38,8 @@ export const $: g_glossary.T.Glossary<pd.SourceLocation> = {
         'algorithms': d({
             "GetElementAt": sfunction(typeParameter("Type"), data(typeReference("GetElementAtData", { "Type": typeParameter("Type") })), { "Type": null }),
             "GetLength": sfunction(externalTypeReference("common", "Number"), data(typeReference("Array", { "Type": typeParameter("Type") })), { "Type": null }),
-            "Merge": sfunction(typeReference("Array",  { "Type": typeParameter("Type") }), data(typeReference("ArrayOfArrays",  { "Type": typeParameter("Type") })), { "Type": null })
+            "Merge": sfunction(typeReference("Array",  { "Type": typeParameter("Type") }), data(typeReference("ArrayOfArrays",  { "Type": typeParameter("Type") })), { "Type": null }),
+            "Push": sfunction(typeReference("Array",  { "Type": typeParameter("Type") }), data(typeReference("PushParameters",  { "Type": typeParameter("Type") })), { "Type": null }),
         }),
     },
 }

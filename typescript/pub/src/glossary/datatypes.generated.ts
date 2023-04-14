@@ -31,4 +31,16 @@ export namespace T {
         readonly 'array': T.Array<TType>
         readonly 'index': number
     }
+    
+    export namespace PushParameters {
+        
+        export type array<TType> = T.Array<TType>
+        
+        export type element<TType> = TType
+    }
+    
+    export type PushParameters<TType> = {
+        readonly 'array': T.Array<TType>
+        readonly 'element': TType
+    }
 }

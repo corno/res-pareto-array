@@ -29,5 +29,10 @@ export namespace SYNC {
         export namespace F {
             export type Merge = <TType>($: T.ArrayOfArrays<TType>) => T.Array<TType>
         }
+        
+        
+        export namespace F {
+            export type Push = <TType>($: T.PushParameters<TType>) => T.Array<TType>
+        }
     }
 }
