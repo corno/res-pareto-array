@@ -7,6 +7,7 @@ const d = pd.d
 
 export const $: g_project.T.ModuleDefinition.api.root<pd.SourceLocation> = {
     'algorithms': d({
+        "getLastElement": algorithm(sfunction("this", {}, "GetLastElement")),
         "getElementAt": algorithm(sfunction("this", {}, "GetElementAt")),
         "getLength": algorithm(sfunction("this", {}, "GetLength")),
         "merge": algorithm(sfunction("this", {}, "Merge")),

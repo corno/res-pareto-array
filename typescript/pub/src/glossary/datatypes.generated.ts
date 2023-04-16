@@ -32,6 +32,13 @@ export namespace T {
         readonly 'index': number
     }
     
+    export namespace OptionalElement {
+        
+        export type O<TType> = TType
+    }
+    
+    export type OptionalElement<TType> = [ false ] | [ true, TType]
+    
     export namespace PushParameters {
         
         export type array<TType> = T.Array<TType>

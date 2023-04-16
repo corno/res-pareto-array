@@ -22,6 +22,11 @@ export namespace SYNC {
         
         
         export namespace F {
+            export type GetLastElement = <TType>($: T.Array<TType>) => T.OptionalElement<TType>
+        }
+        
+        
+        export namespace F {
             export type GetLength = <TType>($: T.Array<TType>) => g_common.T.Number
         }
         
